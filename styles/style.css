@@ -1,0 +1,153 @@
+html {
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+    width: -moz-available;
+    /* WebKit-based browsers will ignore this. */
+    width: -webkit-fill-available;
+    /* Mozilla-based browsers will ignore this. */
+    align-items: center;
+    margin-inline: 18vw;
+    justify-content: center;
+    align-content: center;
+    background-color: hsl(214, 17%, 92%);
+}
+
+/*------------------------------FONTS------------------------------*/
+.barlow-font,
+h6,
+span,
+b {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+h6 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+b {
+    font-size: 1.3rem;
+}
+
+.graduated-photo-span-area span {
+    font-size: 11px;
+    font-weight: 300;
+}
+
+.testimonial-span-area span {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.article-span-white,
+h6 span b {
+    color: #FFFFFF;
+}
+
+.article-span-grey,
+h6 span b {
+    color: hsl(217, 19%, 35%);
+}
+
+.article-span-light-grey,
+h6 span b {
+    color: hsl(0, 0%, 81%);
+}
+
+/*------------------------------FLEXBOX------------------------------*/
+.flex-column,
+section,
+article,
+.testimonial-span-area {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row,
+main,
+.two-col,
+.graduated-photo-span-area {
+    display: flex;
+    flex-direction: row;
+}
+
+/*------------------------------COMMON-INHERITANCE------------------------------*/
+main,
+section,
+.two-col {
+    gap: 2rem;
+}
+
+article,
+.graduated-photo-span-area,
+.testimonial-span-area {
+    gap: 1rem;
+}
+
+/*------------------------------AREA------------------------------*/
+article {
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 38px 68px 100px 18px #6464641f;
+}
+
+.graduated-photo-span-area {
+    align-items: center;
+}
+
+#purple-card {
+    background-color: #733FC8;
+    background-image: url(../images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position-x: 20rem;
+    background-origin: content-box;
+}
+
+#last-card {
+    width: 12vw;
+    background-color: #FFFFFF;
+    height: -moz-available;
+    /* WebKit-based browsers will ignore this. */
+    height: -webkit-fill-available;
+    /* Mozilla-based browsers will ignore this. */
+}
+
+/*------------------------------IMG------------------------------*/
+img {
+    height: 3rem;
+    border-radius: 2rem;
+}
+
+.img-border {
+    border-style: solid;
+    border-width: 3px;
+}
+
+/*------------------------------MEDIAS------------------------------*/
+@media (max-width: 1000px) {
+    body {
+        margin-inline: 1rem;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    #last-card {
+        width: fit-content;
+    }
+}
+
+@media (max-width: 650px) {
+    .two-col {
+        flex-direction: column;
+    }
+}
